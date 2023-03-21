@@ -2,13 +2,14 @@
   "name": "y",
   "version": "1.0.0",
   "description": "Midterm Project for CS 4220",
-  "main": "app.js",
+  "main": "cli.js",
   "scripts": {
     "test": "npm run test"
   },
   "author": "Shant Hovagimian, Arthur Keshishyan",
   "license": "ISC",
   "dependencies": {
-    "thesportsdb": "^0.0.2"
+    "thesportsdb": "^0.0.2",
+    "yargs": "^17.7.1"
   }
 }
