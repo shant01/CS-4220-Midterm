@@ -1,30 +1,25 @@
 const axios = require('axios');
+const url = 'https://www.thesportsdb.com/api/v1/json/3';
 
-const url = 'https://www.thesportsdb.com/api/v1/json/1';
-const endpoint = `${url}/searchteams.php`;
-const LOOKUP_TEAM_ENDPOINT = `${url}/lookupteam.php`;
+const searchPlayers = async (keyword) => {
+    try {
+        const response = await axios.get(`${url}/searchplayers.php?p=${keyword}`);
+        return response.data.player;
+    } catch (err) {
+        console.log(err);
+    }
+};
 
-const searchTeams = async (keyword) => {
-  try {
-    const response = await axios.get(`${url}/searchteams.php?t=${encodeURIComponent(keyword)}`);
-    return response.data.teams;
-  } catch (err) {
-    console.error(err);
-    return [];
-  }
-}
-
-const getTeamDetails = async (id) => {
-  try {
-    const response = await axios.get(`${API_URL}/lookupteam.php?id=${encodeURIComponent(id)}`);
-    return response.data.teams[0];
-  } catch (err) {
-    console.error(err);
-    return null;
-  }
-}
+const lookUpId = async (id) => {
+    try {
+        const response = await axios.get(`${url}/lookupplayer.php?id=${id}`);
+        return response.data.players[0];
+    } catch (err) {
+        console.log(err);
+    }
+};
 
 module.exports = {
-  searchTeams,
-  getTeamDetails,
+    searchPlayers,
+    lookUpId 
 };
