@@ -1,16 +1,17 @@
 {
-  "name": "sports-db",
+  "name": "midterm",
   "version": "1.0.0",
-  "description": "Midterm Project for CS 4220",
+  "description": "Command line application which allows users to search for sports players and return information on them from SportsDB API",
   "main": "cli.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node cli.js"
   },
   "author": "Shant Hovagimian and Arthur Keshishyan",
   "license": "ISC",
   "dependencies": {
     "axios": "^1.3.4",
-    "thesportsdb": "^0.0.2",
+    "fs": "^0.0.1-security",
+    "prompts": "^2.4.2",
     "yargs": "^17.7.1"
   }
 }
