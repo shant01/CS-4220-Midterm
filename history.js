@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 const fs = require('fs');
 const path = require('path');
 
@@ -21,7 +22,7 @@ const saveSearch = (search, resultCount) => {
 
     history.push({
         search,
-        resultCount,
+        resultCount
     });
 
     fs.writeFileSync(historyFilePath, JSON.stringify(history, null, 2));

@@ -3,7 +3,9 @@ const url = 'https://www.thesportsdb.com/api/v1/json/3';
 
 const searchPlayers = async (keyword) => {
     try {
-        const response = await axios.get(`${url}/searchplayers.php?p=${keyword}`);
+        const response = await axios.get(
+            `${url}/searchplayers.php?p=${keyword}`
+        );
         return response.data.player;
     } catch (err) {
         console.log(err);
@@ -21,5 +23,5 @@ const lookUpId = async (id) => {
 
 module.exports = {
     searchPlayers,
-    lookUpId 
+    lookUpId
 };

@@ -1,0 +1,22 @@
+[
+  {
+    "search": "messi",
+    "resultCount": 5
+  },
+  {
+    "search": "kobe",
+    "resultCount": 7
+  },
+  {
+    "search": "messi",
+    "resultCount": 5
+  },
+  {
+    "search": "kobe",
+    "resultCount": 7
+  },
+  {
+    "search": "alvarez",
+    "resultCount": 25
+  }
+]

@@ -12,7 +12,11 @@ const displayResults = async (keyword, limit) => {
 
     results.forEach((result, index) => {
         if (limit === undefined || index < limit) {
-            console.log(`${index + 1}. ${result.strPlayer} (${result.strTeam} - ${result.strSport})`);
+            console.log(
+                `${index + 1}. ${result.strPlayer} (${result.strTeam} - ${
+                    result.strSport
+                })`
+            );
         }
     });
 
@@ -23,8 +27,11 @@ const displayResults = async (keyword, limit) => {
             type: 'number',
             name: 'choice',
             message: 'Select a player by typing their number:',
-            validate: (value) => (value > 0 && value <= results.length ? true : 'Please enter a valid number'),
-        },
+            validate: (value) =>
+                value > 0 && value <= results.length
+                    ? true
+                    : 'Please enter a valid number'
+        }
     ]);
 
     const index = response.choice - 1;

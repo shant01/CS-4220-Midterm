@@ -7,18 +7,16 @@ yargs(process.argv.slice(2))
         'search [keyword]',
         'Search for teams by keyword',
         (yargs) => {
-            return (    
-                yargs
-                    .positional('keyword', {
-                        describe: 'Keyword to search for',
-                        type: 'string',
-                })  
+            return yargs
+                .positional('keyword', {
+                    describe: 'Keyword to search for',
+                    type: 'string'
+                })
                 .options('help', {
                     alias: 'h',
                     type: 'boolean',
-                    describe: 'Show help',
-                  })
-            );
+                    describe: 'Show help'
+                });
         },
         (args) => {
             if (args.keyword) {
@@ -26,7 +24,6 @@ yargs(process.argv.slice(2))
             } else {
                 console.log('Enter a keyword to search for.');
             }
-        },
+        }
     )
-    .help()
-    .argv;
+    .help().argv;
